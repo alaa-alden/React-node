@@ -1,3 +1,9 @@
+# librarys that use in this step are : 
+1. react 
+`react react-router-dom`
+2. react router
+`npm i react-router-dom`
+---
 # 1 the first part : server-side rendering with react
 - file is include react code is .jsx
 - use react-dom/server for sent dom-react as string
