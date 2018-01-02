@@ -36,25 +36,52 @@ and Recepion that in client by variable then sent to element
 
  ---
 
-# 4 the fourth part :Server-side routing with react-router@3
-when use jsx js with nodemon you should `nodemon file.js --ext js,jsx`
-use in the part :
-- __react-router__:
+# Server-side routing with react-router v4 with [here](https://github.com/IrfanBaqui/react-router-v4-tutorial)
+ I'm learn some information about :
+ -  Introduction react routing
+   -  Browser Router
+   - Route
+   - NavLink
+ all that from `rect-router-dom`
+ [learn about that from it](https://reacttraining.com/react-router/web/api/BrowserRouter)
 
-  - `match({ routes, location, [history], ...options }, callback)`:
+- Basic_Routing
+    - Switch
+    - PROPS
+      - this.props.match
+        - path
+        - url
+        - isExact
+        - params
+      - location
+        - pathname
+        - search
+        - hash
+        - key
+- Blocking:
+  - prompt :not leave else after question
+  ```java
+    <Prompt message="Are you sure you want to leave?"/> !;
+  ```
 
-    This function is to be used for server-side rendering. It matches a set of routes to a location, without rendering, and calls a `callback(error, redirectLocation, renderProps)` when it's done. [here](https://knowbody.github.io/react-router-docs/api/match.html)
-      1. _routes_:
-        - __Router__ :  that is tag and pass into it is history
-            - __browserHistory__ : use when  you use `<ReactRouter.Router history=******>`
-        - __Route__ : use for pass component and url that use with component
-
-        _the example code :_
+- Miss :
+  - 404 routers
+  that use router default for miss route
+- Query params:
+  - link to->path name:
+  - link to->search  
+# the note for webpack
+run webpack with node
 ```javascript
-  <ReactRouter.Router history={ReactRouter.browserhistory}>
-    <ReactRouter.Route path='/' component={Winner}></ReactRouter.Route>
-  </ReactRouter.Router>
-```
-      2. _location_: `location:request.url`
-      3. _callback(.....)_ : use
-        - `<ReactRouter.ReactContext {...renderProps} />` if renderProps is here
+var config = require('./webpack.development.config')
+var webpack = require('webpack')
+var webpackDevMiddleware = require('webpack-dev-middleware')
+var webpackHotMiddleware = require('webpack-hot-middleware')
+var compiler = webpack(config)
+app.use(webpackDevMiddleware(compiler, {
+  noInfo: true,
+  publicPath: config.output.publicPath,
+  historyApiFallback: true
+}))
+app.use(webpackHotMiddleware(compiler))
+````
