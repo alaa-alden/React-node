@@ -39,9 +39,10 @@ and Recepion that in client by variable then sent to element
 # Server-side routing with react-router v4 with [here](https://github.com/IrfanBaqui/react-router-v4-tutorial)
  I'm learn some information about :
  -  Introduction react routing
-   -  Browser Router
-   - Route
-   - NavLink
+       -  Browser Router
+       - Route
+       - NavLink
+
  all that from `rect-router-dom`
  [learn about that from it](https://reacttraining.com/react-router/web/api/BrowserRouter)
 
